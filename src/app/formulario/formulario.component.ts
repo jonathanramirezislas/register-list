@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
-import { logggingService } from '../loggingServise.service';
+//import { logggingService } from '../loggingServise.service';
 import { Persona } from '../persona.model';
 import { PersonaService } from '../personas.service';
 
@@ -16,7 +16,7 @@ export class FormularioComponent  {
   @ViewChild('nombreInputRef') nombreInput : ElementRef;
   @ViewChild('appellidoInputRef') apellidoInput : ElementRef;
 
-  constructor(private logginService:logggingService,
+  constructor(//private logginService:logggingService,
               private personaService:PersonaService
     ){
 
@@ -30,7 +30,7 @@ export class FormularioComponent  {
    //Como ya se tiene un servicio ya no necesitamos pasarle los datos al padre
    //this.personaCreada.emit(persona1);
    
-   this.logginService.enviarMensajeConsola("Se agrego :"+persona1.nombre+" "+persona1.apellido);
+   ///this.logginService.enviarMensajeConsola("Se agrego :"+persona1.nombre+" "+persona1.apellido);
     this.personaService.agregarPersona(persona1);
  }
 

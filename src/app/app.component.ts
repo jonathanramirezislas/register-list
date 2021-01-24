@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { logggingService } from './loggingServise.service';
 import { Persona } from './persona.model';
 import { PersonaService } from './personas.service';
 
@@ -14,9 +13,7 @@ export class AppComponent implements OnInit {
 
 
 
-  constructor(private logginService:logggingService,
-              private personaService:PersonaService
-    ){}
+  constructor(private personaService:PersonaService){}
 
 
     ngOnInit(): void{
