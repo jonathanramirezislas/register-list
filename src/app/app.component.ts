@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { logggingService } from './loggingServise.service';
 import { Persona } from './persona.model';
 
 @Component({
@@ -14,8 +15,12 @@ export class AppComponent {
     new Persona('Karla', 'Lara')
   ];
 
+  constructor(private logginService:logggingService){}
+
+
   personaAgregada(persona: Persona){
     this.personas.push( persona );
+    this.logginService.enviarMensajeConsola("se agrego a persona");
   }
 
 }
