@@ -1,17 +1,20 @@
-<div class="container">
-  <div class="col">
+<div class="box" id="heading">
     <h3>{{ titulo }}</h3>
   </div>
-  <hr />
-  <!-- Getting personacreada from son -->
-  <app-formulario
-  ></app-formulario>
-  <hr />
+  
+  <div class="box">
+    <!-- Getting personacreada from son -->
+    <app-formulario
+    ></app-formulario>
+  </div>
+
+<div class="box">
   <!-- Send personas to son -->
   <app-persona
     *ngFor="let personaElemento of personas; let i = index"
     [persona]="personaElemento"
     [indice]="i"
   >
-  </app-persona>
-</div>
+  </app-persona>  
+</div>  
+

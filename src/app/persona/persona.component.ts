@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { runInThisContext } from 'vm';
 import { Persona } from '../persona.model';
 import { PersonaService } from '../personas.service';
 
