@@ -7,15 +7,14 @@ import { Persona } from '../persona.model';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent  {
-  
+  //emiter to the father
   @Output() personaCreada = new EventEmitter<Persona>();
 
-  nombreInput:string = '';
-  apellidoInput:string = '';
 
-  agregarPersona(){
-    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
-    this.personaCreada.emit(persona1);
-  }
+  agregarPersona(nombreInput: HTMLInputElement, apellidoInput: HTMLInputElement){
+   let persona1 = new Persona(nombreInput.value, apellidoInput.value);
+   this.personaCreada.emit(persona1);
+ }
+
 
 }

@@ -8,6 +8,7 @@ import { Persona } from '../persona.model';
 })
 export class PersonaComponent implements OnInit {
 
+  //getting personas from father
   @Input() persona: Persona;
   @Input() indice: number;
 

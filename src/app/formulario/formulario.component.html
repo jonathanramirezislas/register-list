@@ -7,8 +7,11 @@
         id="nombre"
         placeholder="Nombre"
         class="form-control"
-        [(ngModel)]="nombreInput"
+        #nombreInputRef
       />
+      <!-- Two way binding
+      [(ngModel)]="nombreInput"
+      -->
     </div>
     <div class="form-group col-md-2">
       <label for="apellido" class="sr-only">Apellido</label>
@@ -18,11 +21,14 @@
         id="apellido"
         placeholder="Apellido"
         class="form-control"
-        [(ngModel)]="apellidoInput"
+        #appellidoInputRef
       />
+      <!--
+      [(ngModel)]="apellidoInput"
+      -->
     </div>
     <div class="col">
-      <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona(nombreInputRef,appellidoInputRef)">
         Agregar
       </button>
     </div>
