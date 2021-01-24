@@ -17,9 +17,12 @@ export class FormularioComponent  {
   @ViewChild('appellidoInputRef') apellidoInput : ElementRef;
 
   constructor(//private logginService:logggingService,
-              private personaService:PersonaService
-    ){
-
+              private personaService:PersonaService)
+              {
+    
+                this.personaService.saludar.subscribe(
+                  (indice:number) =>alert("el indice es "+indice)
+                );
   }
   ngOnInit(): void {
   }
